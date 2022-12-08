@@ -76,9 +76,9 @@ Store the receipt as PDF file
 Take the screenshot of the robot
     [Arguments]    ${order_number}
     Wait Until Element Is Visible    id:robot-preview-image
-    ${screenshot-path}=    Set Variable    ${OUTPUT_DIR}${/}previews${/}robot_preview_${order_number}.png
-    Screenshot    id:robot-preview-image    ${screenshot-path}
-    RETURN    ${screenshot-path}
+    ${screenshot_path}=    Set Variable    ${OUTPUT_DIR}${/}previews${/}robot_preview_${order_number}.png
+    Screenshot    id:robot-preview-image    ${screenshot_path}
+    RETURN    ${screenshot_path}
 
 Embed the robot screenshot to the receipt PDF file
     [Arguments]    ${screenshot_path}    ${pdf_path}
