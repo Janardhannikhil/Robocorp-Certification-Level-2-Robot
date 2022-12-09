@@ -24,8 +24,8 @@ To order Robots from the Robotsparebinindustries
     FOR    ${order}    IN    @{orders}
         close the popup modal
         Fill the form    ${order}
-        Wait Until Keyword Succeeds    30s    1s    preview the robot
-        Wait Until Keyword Succeeds    30s    1s    submit the order
+        Wait Until Keyword Succeeds    10x    4s    preview the robot
+        Wait Until Keyword Succeeds    10x    4s    submit the order
         ${pdf}=    Store the receipt as PDF file    ${order}[Order number]
         ${screenshot}=    Take the screenshot of the robot    ${order}[Order number]
         Embed the robot screenshot to the receipt PDF file    ${screenshot}    ${pdf}
